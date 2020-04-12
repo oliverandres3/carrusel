@@ -1,0 +1,18 @@
+CREATE TABLE slider
+(
+  id serial NOT NULL,
+  image character varying(255),
+  description character varying(255),
+  created timestamp without time zone,
+  modified timestamp without time zone
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE slider
+  OWNER TO postgres;
+
+
+
+
+
