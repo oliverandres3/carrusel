@@ -3,18 +3,18 @@ include_once("db_connect.php");
 
 $sql = "SELECT id, image FROM slider";
   //query pata postgres
-$resultset = pg_query($sql);
-//$resultset = mysqli_query($sql);
+//$resultset = pg_query($sql);
+$resultset = mysqli_query($sql);
 
-$rows = pg_fetch_all($resultset);
-//$rows = mysqli_fetch_all($resultset);
+//$rows = pg_fetch_all($resultset);
+$rows = mysqli_fetch_all($resultset);
 
     $image_count = 0;
     $button_html = '';
     $slider_html = '';
     $thumb_html  = '';
-while( $rows = pg_fetch_assoc($resultset)){
-//while( $rows = mysqli_fetch_assoc($resultset)){
+//while( $rows = pg_fetch_assoc($resultset)){
+while( $rows = mysqli_fetch_assoc($resultset)){
 
     $active_class = "";
 if(!$image_count) {
